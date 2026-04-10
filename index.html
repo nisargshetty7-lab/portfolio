@@ -299,23 +299,23 @@ footer p{font-size:var(--text-xs);color:var(--color-text-faint);}
       </div>
     </div>
     <div class="hero-stats" aria-label="Key metrics">
-      <div class="stat-card fade-up">
-        <div class="stat-number" data-count="14.32">0%</div>
+      <div class="stat-card">
+        <div class="stat-number" id="stat-ctr">0%</div>
         <div class="stat-label">Google Ads CTR</div>
         <div class="stat-sub">vs 3–5% industry avg</div>
       </div>
-      <div class="stat-card fade-up">
-        <div class="stat-number">2,06,618</div>
+      <div class="stat-card">
+        <div class="stat-number" id="stat-reach">0</div>
         <div class="stat-label">Meta Ads Reach</div>
         <div class="stat-sub">on ₹2,400 budget</div>
       </div>
-      <div class="stat-card fade-up">
-        <div class="stat-number">₹17.38</div>
+      <div class="stat-card">
+        <div class="stat-number" id="stat-cpl">₹0</div>
         <div class="stat-label">Best CPL Achieved</div>
         <div class="stat-sub">Cost per messaging conv.</div>
       </div>
-      <div class="stat-card fade-up">
-        <div class="stat-number">93%</div>
+      <div class="stat-card">
+        <div class="stat-number" id="stat-score">0%</div>
         <div class="stat-label">Google Skillshop Score</div>
         <div class="stat-sub">Search Ads Certification</div>
       </div>
@@ -413,35 +413,35 @@ footer p{font-size:var(--text-xs);color:var(--color-text-faint);}
               <td>marketing officer</td>
               <td>819</td>
               <td>167</td>
-              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,20.39%,80px)"></div><span class="ctr-num">20.39%</span></div></td>
+              <td><div class="ctr-bar"><div class="ctr-fill" data-w="100" style="width:100px"></div><span class="ctr-num">20.39%</span></div></td>
               <td>₹1.99</td>
             </tr>
             <tr>
               <td>startup growth strategy</td>
               <td>1,916</td>
               <td>223</td>
-              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,11.64%,80px)"></div><span class="ctr-num">11.64%</span></div></td>
+              <td><div class="ctr-bar"><div class="ctr-fill" data-w="57" style="width:57px"></div><span class="ctr-num">11.64%</span></div></td>
               <td>₹2.90</td>
             </tr>
             <tr>
               <td>startup marketing consultant</td>
               <td>756</td>
               <td>85</td>
-              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,11.24%,80px)"></div><span class="ctr-num">11.24%</span></div></td>
+              <td><div class="ctr-bar"><div class="ctr-fill" data-w="55" style="width:55px"></div><span class="ctr-num">11.24%</span></div></td>
               <td>₹2.34</td>
             </tr>
             <tr>
               <td>chief marketing officer roles</td>
               <td>832</td>
               <td>32</td>
-              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,7.71%,80px)"></div><span class="ctr-num">7.71%</span></div></td>
+              <td><div class="ctr-bar"><div class="ctr-fill" data-w="38" style="width:38px"></div><span class="ctr-num">7.71%</span></div></td>
               <td>₹1.41</td>
             </tr>
             <tr>
               <td>"grow SaaS startup"</td>
               <td>12</td>
               <td>2</td>
-              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,16.67%,80px)"></div><span class="ctr-num">16.67%</span></div></td>
+              <td><div class="ctr-bar"><div class="ctr-fill" data-w="82" style="width:82px"></div><span class="ctr-num">16.67%</span></div></td>
               <td>₹2.20</td>
             </tr>
           </tbody>
@@ -617,11 +617,12 @@ footer p{font-size:var(--text-xs);color:var(--color-text-faint);}
             <div class="val">+91 9004455377</div>
           </div>
         </a>
-        <a href="https://www.linkedin.com/in/nisarg-shetty" target="_blank" rel="noopener noreferrer" class="contact-item">
+        <!-- ✏️ EDIT: Replace nisarg-shetty-9384a6234 below with your real LinkedIn username -->
+        <a href="https://linkedin.com/in/nisarg-shetty-9384a6234" target="_blank" rel="noopener noreferrer" class="contact-item">
           <div class="contact-item-icon">💼</div>
           <div class="contact-item-text">
             <div class="label">LinkedIn</div>
-            <div class="val">linkedin.com/in/nisarg-shetty</div>
+            <div class="val">linkedin.com/in/nisarg-shetty-9384a6234</div>
           </div>
         </a>
         <div class="contact-item">
@@ -660,55 +661,57 @@ footer p{font-size:var(--text-xs);color:var(--color-text-faint);}
   if(t) t.addEventListener('click',()=>setTheme(d==='dark'?'light':'dark'));
 })();
 
-// Number counter animation
-function animateCount(el){
-  const text=el.textContent;
-  const numMatch=text.match(/[\d,.]+/);
-  if(!numMatch) return;
-  const target=parseFloat(numMatch[0].replace(/,/g,''));
-  if(isNaN(target)) return;
-  const isPercent=text.includes('%');
-  const hasComma=numMatch[0].includes(',');
-  const prefix=text.startsWith('₹')?'₹':'';
-  const suffix=isPercent?'%':'';
-  let start=0; const duration=1200; const startTime=performance.now();
+// Simple reliable counter animation
+function countUp(el, target, prefix, suffix, decimals, duration){
+  let start=0; const t0=performance.now();
   function step(now){
-    const p=Math.min((now-startTime)/duration,1);
+    const p=Math.min((now-t0)/duration,1);
     const ease=1-Math.pow(1-p,3);
     const cur=start+(target-start)*ease;
     let display;
-    if(hasComma) display=Math.round(cur).toLocaleString('en-IN');
-    else display=isPercent?cur.toFixed(2):cur.toFixed(cur<100?2:0);
+    if(decimals>0) display=cur.toFixed(decimals);
+    else display=Math.round(cur).toLocaleString('en-IN');
     el.textContent=prefix+display+suffix;
     if(p<1) requestAnimationFrame(step);
   }
   requestAnimationFrame(step);
 }
 
-// Intersection Observer for animations
-const observer=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('visible');
-      // animate stat numbers
-      const num=e.target.querySelector('.stat-number');
-      if(num) animateCount(num);
-      observer.unobserve(e.target);
-    }
-  });
-},{threshold:0.15});
-
-document.querySelectorAll('.fade-up,.stat-card,.kpi,.cert-card,.project-card').forEach(el=>{
-  el.classList.add('fade-up');
-  observer.observe(el);
+// Fire hero stats on page load after short delay
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    countUp(document.getElementById('stat-ctr'), 14.32, '', '%', 2, 1400);
+    countUp(document.getElementById('stat-reach'), 206618, '', '', 0, 1600);
+    countUp(document.getElementById('stat-cpl'), 17.38, '₹', '', 2, 1200);
+    countUp(document.getElementById('stat-score'), 93, '', '%', 0, 1000);
+  }, 400);
 });
 
-// Animate KPI values on scroll
+// Fade-in scroll animations
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}
+  });
+},{threshold:0.12});
+document.querySelectorAll('.project-card,.cert-card,.skill-chip,.contact-item').forEach(el=>{
+  el.classList.add('fade-up'); observer.observe(el);
+});
+
+// KPI value animations on scroll
 const kpiObs=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
       const val=e.target.querySelector('.kpi-val');
-      if(val) animateCount(val);
+      if(val){
+        const t=val.textContent;
+        const num=parseFloat(t.replace(/[₹,%,]/g,'').replace(/,/g,''));
+        if(!isNaN(num)){
+          const pre=t.startsWith('₹')?'₹':'';
+          const suf=t.includes('%')?'%':'';
+          const dec=t.includes('.')?2:0;
+          countUp(val,num,pre,suf,dec,900);
+        }
+      }
       kpiObs.unobserve(e.target);
     }
   });
@@ -720,7 +723,8 @@ const barObs=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
       e.target.querySelectorAll('.ctr-fill').forEach(bar=>{
-        const w=bar.style.width;bar.style.width='0';
+        const w=(bar.getAttribute('data-w')||'0')+'px';
+        bar.style.width='0px';
         setTimeout(()=>bar.style.width=w,100);
       });
       barObs.unobserve(e.target);
