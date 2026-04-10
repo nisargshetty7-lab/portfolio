@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nisarg Shetty — Performance Marketing Portfolio</title>
+<meta name="description" content="Performance marketer with real hands-on Google Ads and Meta Ads campaign experience. Google Ads Search Certified (93%). Based in Mumbai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+<style>
+:root,[data-theme="light"]{
+  --color-bg:#f7f6f2;--color-surface:#f9f8f5;--color-surface-2:#fbfbf9;
+  --color-surface-offset:#f0ede8;--color-divider:#dcd9d5;--color-border:#d4d1ca;
+  --color-text:#1a1814;--color-text-muted:#6b6a66;--color-text-faint:#b5b4af;
+  --color-text-inverse:#f9f8f4;
+  --color-primary:#c84b1a;--color-primary-hover:#a83a12;--color-primary-active:#872e0e;
+  --color-primary-highlight:#f0ddd5;
+  --color-accent:#1a6bc8;
+  --shadow-sm:0 1px 2px oklch(0.2 0.01 80/0.06);
+  --shadow-md:0 4px 12px oklch(0.2 0.01 80/0.1);
+  --shadow-lg:0 12px 40px oklch(0.2 0.01 80/0.14);
+  --radius-sm:0.375rem;--radius-md:0.5rem;--radius-lg:0.75rem;--radius-xl:1rem;--radius-full:9999px;
+  --transition:180ms cubic-bezier(0.16,1,0.3,1);
+  --font-display:'Instrument Serif',Georgia,serif;
+  --font-body:'DM Sans','Helvetica Neue',sans-serif;
+  --text-xs:clamp(0.75rem,0.7rem + 0.25vw,0.875rem);
+  --text-sm:clamp(0.875rem,0.8rem + 0.35vw,1rem);
+  --text-base:clamp(1rem,0.95rem + 0.25vw,1.125rem);
+  --text-lg:clamp(1.125rem,1rem + 0.75vw,1.5rem);
+  --text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
+  --text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);
+  --text-3xl:clamp(2.5rem,1rem + 4vw,5rem);
+  --space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;--space-4:1rem;
+  --space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;
+  --space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;
+  --content-narrow:640px;--content-default:960px;--content-wide:1200px;
+}
+[data-theme="dark"]{
+  --color-bg:#111009;--color-surface:#161512;--color-surface-2:#1b1a17;
+  --color-surface-offset:#201f1c;--color-divider:#2a2926;--color-border:#343230;
+  --color-text:#d8d6d2;--color-text-muted:#7a7875;--color-text-faint:#4e4d4a;
+  --color-text-inverse:#1a1814;
+  --color-primary:#e8723a;--color-primary-hover:#f08550;--color-primary-active:#f59a6b;
+  --color-primary-highlight:#3a2218;
+  --color-accent:#5a9fe8;
+  --shadow-sm:0 1px 2px oklch(0 0 0/0.25);
+  --shadow-md:0 4px 16px oklch(0 0 0/0.4);
+  --shadow-lg:0 12px 40px oklch(0 0 0/0.55);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth;scroll-padding-top:5rem;}
+body{min-height:100dvh;line-height:1.6;font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);transition:background var(--transition),color var(--transition);}
+img,picture,video,canvas,svg{display:block;max-width:100%;height:auto;}
+h1,h2,h3,h4{text-wrap:balance;line-height:1.15;}
+p,li{text-wrap:pretty;max-width:72ch;}
+button{cursor:pointer;background:none;border:none;font:inherit;color:inherit;}
+a{color:inherit;text-decoration:none;}
+::selection{background:oklch(from var(--color-primary) l c h/0.2);color:var(--color-text);}
+:focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm);}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:oklch(from var(--color-bg) l c h/0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid oklch(from var(--color-text) l c h/0.08);transition:background var(--transition);}
+.nav-inner{max-width:var(--content-wide);margin-inline:auto;padding:var(--space-4) var(--space-6);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);}
+.nav-logo{display:flex;align-items:center;gap:var(--space-3);}
+.logo-mark{width:36px;height:36px;flex-shrink:0;}
+.nav-name{font-family:var(--font-display);font-size:var(--text-base);font-weight:400;letter-spacing:-0.01em;}
+.nav-links{display:flex;align-items:center;gap:var(--space-1);}
+.nav-links a{font-size:var(--text-sm);color:var(--color-text-muted);padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);transition:color var(--transition),background var(--transition);}
+.nav-links a:hover{color:var(--color-text);background:oklch(from var(--color-text) l c h/0.06);}
+.theme-btn{width:36px;height:36px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-text-muted);border:1px solid var(--color-border);transition:color var(--transition),border-color var(--transition),background var(--transition);}
+.theme-btn:hover{color:var(--color-text);background:oklch(from var(--color-text) l c h/0.06);}
+
+/* HERO */
+.hero{min-height:90vh;display:flex;align-items:center;padding:clamp(var(--space-16),8vw,var(--space-24)) var(--space-6);position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;pointer-events:none;z-index:0;}
+.hero-bg svg{width:100%;height:100%;}
+.hero-inner{max-width:var(--content-wide);margin-inline:auto;width:100%;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center;}
+.hero-tag{display:inline-flex;align-items:center;gap:var(--space-2);background:var(--color-primary-highlight);color:var(--color-primary);font-size:var(--text-xs);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:var(--space-2) var(--space-3);border-radius:var(--radius-full);margin-bottom:var(--space-5);border:1px solid oklch(from var(--color-primary) l c h/0.25);}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--color-primary);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero h1{font-family:var(--font-display);font-size:var(--text-3xl);font-weight:400;line-height:1.05;letter-spacing:-0.02em;margin-bottom:var(--space-5);}
+.hero h1 em{font-style:italic;color:var(--color-primary);}
+.hero-sub{font-size:var(--text-base);color:var(--color-text-muted);line-height:1.7;max-width:52ch;margin-bottom:var(--space-8);}
+.hero-ctas{display:flex;gap:var(--space-3);flex-wrap:wrap;}
+.btn-primary{background:var(--color-primary);color:#fff;padding:var(--space-3) var(--space-6);border-radius:var(--radius-md);font-size:var(--text-sm);font-weight:600;letter-spacing:0.01em;transition:background var(--transition),transform var(--transition),box-shadow var(--transition);}
+.btn-primary:hover{background:var(--color-primary-hover);transform:translateY(-1px);box-shadow:0 4px 16px oklch(from var(--color-primary) l c h/0.35);}
+.btn-primary:active{transform:translateY(0);}
+.btn-ghost{border:1px solid var(--color-border);color:var(--color-text);padding:var(--space-3) var(--space-6);border-radius:var(--radius-md);font-size:var(--text-sm);font-weight:500;transition:background var(--transition),border-color var(--transition);}
+.btn-ghost:hover{background:oklch(from var(--color-text) l c h/0.06);border-color:oklch(from var(--color-text) l c h/0.2);}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);}
+.stat-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-6);position:relative;overflow:hidden;transition:transform var(--transition),box-shadow var(--transition);}
+.stat-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--color-primary);opacity:0.6;}
+.stat-card:nth-child(2)::before{background:var(--color-accent);}
+.stat-card:nth-child(3)::before{background:#22a06b;}
+.stat-card:nth-child(4)::before{background:#a855f7;}
+.stat-number{font-family:var(--font-display);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:400;line-height:1;margin-bottom:var(--space-2);letter-spacing:-0.02em;}
+.stat-label{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500;text-transform:uppercase;letter-spacing:0.08em;}
+.stat-sub{font-size:var(--text-xs);color:var(--color-text-faint);margin-top:var(--space-1);}
+
+/* SECTION BASE */
+section{padding:clamp(var(--space-16),8vw,var(--space-24)) var(--space-6);}
+.section-inner{max-width:var(--content-wide);margin-inline:auto;}
+.section-eyebrow{font-size:var(--text-xs);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-primary);margin-bottom:var(--space-3);}
+.section-title{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:400;letter-spacing:-0.02em;margin-bottom:var(--space-4);line-height:1.1;}
+.section-sub{font-size:var(--text-base);color:var(--color-text-muted);max-width:60ch;line-height:1.7;margin-bottom:var(--space-12);}
+.divider{border:none;border-top:1px solid var(--color-divider);margin:0;}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--space-16);align-items:center;}
+.about-text p{font-size:var(--text-base);color:var(--color-text-muted);line-height:1.8;margin-bottom:var(--space-5);}
+.about-text p strong{color:var(--color-text);font-weight:600;}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);}
+.skill-chip{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-3) var(--space-4);font-size:var(--text-sm);display:flex;align-items:center;gap:var(--space-2);transition:border-color var(--transition),background var(--transition);}
+.skill-chip:hover{border-color:oklch(from var(--color-primary) l c h/0.4);background:var(--color-surface-2);}
+.skill-chip .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.dot-orange{background:#e8723a;}
+.dot-blue{background:#5a9fe8;}
+.dot-green{background:#22a06b;}
+.dot-purple{background:#a855f7;}
+.dot-yellow{background:#d4a017;}
+
+/* PROJECTS */
+.projects-section{background:var(--color-surface);}
+.project-card{background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-xl);overflow:hidden;margin-bottom:var(--space-12);transition:box-shadow var(--transition);}
+.project-card:hover{box-shadow:var(--shadow-lg);}
+.project-header{padding:var(--space-8) var(--space-8) 0;display:grid;grid-template-columns:1fr auto;gap:var(--space-6);align-items:start;}
+.project-meta{display:flex;gap:var(--space-2);flex-wrap:wrap;margin-bottom:var(--space-3);}
+.badge{font-size:var(--text-xs);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);}
+.badge-orange{background:oklch(from #e8723a l c h/0.15);color:#e8723a;border:1px solid oklch(from #e8723a l c h/0.3);}
+.badge-blue{background:oklch(from #5a9fe8 l c h/0.15);color:#5a9fe8;border:1px solid oklch(from #5a9fe8 l c h/0.3);}
+.badge-green{background:oklch(from #22a06b l c h/0.15);color:#22a06b;border:1px solid oklch(from #22a06b l c h/0.3);}
+.badge-purple{background:oklch(from #a855f7 l c h/0.15);color:#a855f7;border:1px solid oklch(from #a855f7 l c h/0.3);}
+.project-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:400;letter-spacing:-0.01em;margin-bottom:var(--space-2);}
+.project-client{font-size:var(--text-sm);color:var(--color-text-muted);}
+.project-number{font-family:var(--font-display);font-size:clamp(3rem,6vw,5rem);color:oklch(from var(--color-text) l c h/0.06);line-height:1;font-weight:400;user-select:none;}
+.project-body{padding:var(--space-6) var(--space-8) var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);}
+.project-desc{font-size:var(--text-base);color:var(--color-text-muted);line-height:1.75;}
+.project-desc p{margin-bottom:var(--space-4);}
+.project-desc p:last-child{margin-bottom:0;}
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);}
+.kpi{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);transition:transform var(--transition);}
+.kpi:hover{transform:translateY(-2px);}
+.kpi-val{font-family:var(--font-display);font-size:clamp(1.4rem,2.5vw,2rem);line-height:1;margin-bottom:var(--space-1);letter-spacing:-0.02em;}
+.kpi-val.orange{color:var(--color-primary);}
+.kpi-val.blue{color:var(--color-accent);}
+.kpi-val.green{color:#22a06b;}
+.kpi-val.purple{color:#a855f7;}
+.kpi-lbl{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500;text-transform:uppercase;letter-spacing:0.07em;}
+.strategy-strip{padding:0 var(--space-8) var(--space-8);display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
+.strategy-item{background:var(--color-surface-offset);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);}
+.strategy-item h4{font-size:var(--text-sm);font-weight:700;margin-bottom:var(--space-2);color:var(--color-text);}
+.strategy-item p{font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.6;max-width:none;}
+.insight-box{margin:0 var(--space-8) var(--space-8);background:var(--color-primary-highlight);border:1px solid oklch(from var(--color-primary) l c h/0.2);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);display:flex;gap:var(--space-4);align-items:flex-start;}
+.insight-icon{font-size:1.25rem;flex-shrink:0;margin-top:2px;}
+.insight-box p{font-size:var(--text-sm);color:var(--color-text);line-height:1.6;max-width:none;}
+.insight-box strong{color:var(--color-primary);}
+
+/* KW TABLE */
+.kw-section{padding:0 var(--space-8) var(--space-8);}
+.kw-section h3{font-size:var(--text-base);font-weight:600;margin-bottom:var(--space-4);color:var(--color-text);}
+.kw-table{width:100%;border-collapse:collapse;font-size:var(--text-sm);}
+.kw-table th{text-align:left;padding:var(--space-2) var(--space-3);font-size:var(--text-xs);font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--color-text-muted);border-bottom:1px solid var(--color-divider);}
+.kw-table td{padding:var(--space-3);border-bottom:1px solid oklch(from var(--color-divider) l c h/0.5);color:var(--color-text-muted);}
+.kw-table tr:last-child td{border-bottom:none;}
+.kw-table tr:hover td{background:oklch(from var(--color-text) l c h/0.03);}
+.kw-table td:first-child{color:var(--color-text);font-weight:500;}
+.ctr-bar{display:flex;align-items:center;gap:var(--space-2);}
+.ctr-fill{height:6px;border-radius:var(--radius-full);background:var(--color-primary);min-width:4px;transition:width 0.6s ease;}
+.ctr-num{font-weight:600;color:var(--color-text);font-size:var(--text-xs);}
+
+/* META CREATIVE TABLE */
+.creative-table-wrap{padding:0 var(--space-8) var(--space-8);}
+.creative-table{width:100%;border-collapse:collapse;font-size:var(--text-sm);}
+.creative-table th{text-align:left;padding:var(--space-2) var(--space-3);font-size:var(--text-xs);font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--color-text-muted);border-bottom:1px solid var(--color-divider);}
+.creative-table td{padding:var(--space-3);border-bottom:1px solid oklch(from var(--color-divider) l c h/0.5);color:var(--color-text-muted);}
+.creative-table tr:last-child td{border-bottom:none;}
+.creative-table tr:hover td{background:oklch(from var(--color-text) l c h/0.03);}
+.creative-table td:first-child{color:var(--color-text);font-weight:500;}
+.highlight-row td{background:oklch(from var(--color-primary) l c h/0.07)!important;}
+.highlight-row td:first-child{color:var(--color-primary)!important;}
+.winner-tag{display:inline-block;background:var(--color-primary);color:#fff;font-size:0.65rem;font-weight:700;letter-spacing:0.05em;padding:1px 6px;border-radius:var(--radius-full);margin-left:var(--space-2);vertical-align:middle;}
+
+/* CERT */
+.certs-section{background:var(--color-bg);}
+.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);}
+.cert-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-6);transition:transform var(--transition),box-shadow var(--transition);}
+.cert-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
+.cert-icon{width:44px;height:44px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:var(--space-4);}
+.cert-icon.google{background:oklch(from #5a9fe8 l c h/0.15);}
+.cert-icon.meta{background:oklch(from #5b7fe8 l c h/0.15);}
+.cert-icon.ds{background:oklch(from #22a06b l c h/0.15);}
+.cert-name{font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-1);}
+.cert-issuer{font-size:var(--text-xs);color:var(--color-text-muted);}
+.cert-score{display:inline-flex;align-items:center;gap:var(--space-1);margin-top:var(--space-3);font-size:var(--text-xs);font-weight:700;color:var(--color-primary);}
+
+/* CONTACT */
+.contact-section{background:var(--color-surface);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center;}
+.contact-cta h2{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:400;letter-spacing:-0.02em;margin-bottom:var(--space-5);line-height:1.15;}
+.contact-cta h2 em{font-style:italic;color:var(--color-primary);}
+.contact-cta p{font-size:var(--text-base);color:var(--color-text-muted);max-width:50ch;line-height:1.7;margin-bottom:var(--space-8);}
+.contact-links{display:flex;flex-direction:column;gap:var(--space-3);}
+.contact-item{display:flex;align-items:center;gap:var(--space-4);background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);transition:border-color var(--transition),transform var(--transition);}
+.contact-item:hover{border-color:oklch(from var(--color-primary) l c h/0.4);transform:translateX(4px);}
+.contact-item-icon{width:40px;height:40px;border-radius:var(--radius-md);background:var(--color-surface-offset);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;}
+.contact-item-text .label{font-size:var(--text-xs);color:var(--color-text-faint);font-weight:600;letter-spacing:0.07em;text-transform:uppercase;}
+.contact-item-text .val{font-size:var(--text-sm);color:var(--color-text);font-weight:500;}
+
+/* FOOTER */
+footer{padding:var(--space-8) var(--space-6);border-top:1px solid var(--color-divider);text-align:center;}
+.footer-inner{max-width:var(--content-wide);margin-inline:auto;display:flex;justify-content:space-between;align-items:center;gap:var(--space-4);flex-wrap:wrap;}
+footer p{font-size:var(--text-xs);color:var(--color-text-faint);}
+
+/* ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.fade-up:nth-child(2){transition-delay:0.1s;}
+.fade-up:nth-child(3){transition-delay:0.2s;}
+.fade-up:nth-child(4){transition-delay:0.3s;}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-stats{display:none;}
+  .about-grid,.project-body,.contact-grid{grid-template-columns:1fr;}
+  .certs-grid{grid-template-columns:1fr 1fr;}
+  .strategy-strip{grid-template-columns:1fr;}
+  .kpi-grid{grid-template-columns:1fr 1fr;}
+  .project-header{grid-template-columns:1fr;}
+  .project-number{display:none;}
+  .nav-links{display:none;}
+  .project-body,.project-header,.strategy-strip,.kw-section,.creative-table-wrap,.insight-box{padding-left:var(--space-5);padding-right:var(--space-5);}
+  .skills-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .certs-grid{grid-template-columns:1fr;}
+  .kpi-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg class="logo-mark" viewBox="0 0 36 36" fill="none" aria-label="NS logo">
+        <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
+        <text x="6" y="25" font-family="serif" font-size="18" fill="white" font-weight="400">NS</text>
+      </svg>
+      <span class="nav-name">Nisarg Shetty</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-btn" data-theme-toggle aria-label="Switch theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <svg viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="g1" cx="20%" cy="30%" r="60%">
+          <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0.06"/>
+          <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="g2" cx="80%" cy="70%" r="50%">
+          <stop offset="0%" stop-color="var(--color-accent)" stop-opacity="0.05"/>
+          <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1440" height="800" fill="url(#g1)"/>
+      <rect width="1440" height="800" fill="url(#g2)"/>
+      <line x1="0" y1="400" x2="1440" y2="400" stroke="var(--color-divider)" stroke-opacity="0.4" stroke-width="0.5"/>
+      <line x1="720" y1="0" x2="720" y2="800" stroke="var(--color-divider)" stroke-opacity="0.4" stroke-width="0.5"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">
+        <span class="hero-tag-dot"></span>
+        Mumbai · Performance Marketing
+      </div>
+      <h1>Turning ad spend<br>into <em>measurable</em><br>results.</h1>
+      <p class="hero-sub">Google Ads Search Certified performance marketer with real hands-on campaign experience — 2L+ reach on ₹2,400 budget, 14.32% CTR (3× industry avg), and confirmed e-commerce sales from paid campaigns.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">View Campaign Work</a>
+        <a href="#contact" class="btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-stats" aria-label="Key metrics">
+      <div class="stat-card fade-up">
+        <div class="stat-number" data-count="14.32">0%</div>
+        <div class="stat-label">Google Ads CTR</div>
+        <div class="stat-sub">vs 3–5% industry avg</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-number">2,06,618</div>
+        <div class="stat-label">Meta Ads Reach</div>
+        <div class="stat-sub">on ₹2,400 budget</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-number">₹17.38</div>
+        <div class="stat-label">Best CPL Achieved</div>
+        <div class="stat-sub">Cost per messaging conv.</div>
+      </div>
+      <div class="stat-card fade-up">
+        <div class="stat-number">93%</div>
+        <div class="stat-label">Google Skillshop Score</div>
+        <div class="stat-sub">Search Ads Certification</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-eyebrow">About Me</p>
+        <h2 class="section-title" style="margin-bottom:var(--space-6)">Finance brain.<br>Performance marketer.</h2>
+        <p>I'm Nisarg Shetty, a Mumbai-based performance marketer with a <strong>BMS (Bachelor of Management Studies)</strong> background and hands-on campaign experience in Google Ads and Meta Ads. My finance training gives me a natural edge in reading ROI, budget allocation, and understanding what numbers actually mean for a business.</p>
+        <p>I completed a comprehensive <strong>Digital Marketing & Generative AI program at Digital Scholar</strong>, where I ran real campaigns for real clients — not mock projects. I'm Google Ads Search Certified (93%, Skillshop) and experienced in campaign setup, audience segmentation, creative evaluation, and conversion tracking.</p>
+        <p>I also work with <strong>n8n for marketing automation</strong> and use AI tools (ChatGPT, Claude, Perplexity) daily to build briefs, generate copy variations, and analyse competitor ad libraries — skills that are rare at the entry level.</p>
+      </div>
+      <div>
+        <p style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-4);">Skills & Tools</p>
+        <div class="skills-grid">
+          <div class="skill-chip"><span class="dot dot-orange"></span>Meta Ads Manager</div>
+          <div class="skill-chip"><span class="dot dot-blue"></span>Google Ads</div>
+          <div class="skill-chip"><span class="dot dot-blue"></span>Google Tag Manager</div>
+          <div class="skill-chip"><span class="dot dot-orange"></span>Meta Pixel</div>
+          <div class="skill-chip"><span class="dot dot-green"></span>n8n Automation</div>
+          <div class="skill-chip"><span class="dot dot-blue"></span>Google Analytics</div>
+          <div class="skill-chip"><span class="dot dot-purple"></span>AI Tools (ChatGPT, Claude)</div>
+          <div class="skill-chip"><span class="dot dot-yellow"></span>Canva / Creative Review</div>
+          <div class="skill-chip"><span class="dot dot-orange"></span>ABO / CBO Campaign Mgmt</div>
+          <div class="skill-chip"><span class="dot dot-green"></span>Audience Segmentation</div>
+          <div class="skill-chip"><span class="dot dot-blue"></span>Keyword Research</div>
+          <div class="skill-chip"><span class="dot dot-purple"></span>Meta Ad Library Research</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Campaign Work</p>
+    <h2 class="section-title">Real campaigns.<br>Real results.</h2>
+    <p class="section-sub">Every project below involved real ad spend, real clients, and real outcomes — not simulations or mock briefs.</p>
+
+    <!-- PROJECT 1: GOOGLE ADS -->
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-meta">
+            <span class="badge badge-blue">Google Search Ads</span>
+            <span class="badge badge-green">B2B / Services</span>
+          </div>
+          <h3 class="project-title">Fractional CMO Lead Generation — Google Search Campaign</h3>
+          <p class="project-client">Client: Daksh Juneja — Fractional CMO & AI Marketing Trainer · 15+ years experience, trained 4,000+ students</p>
+        </div>
+        <div class="project-number">01</div>
+      </div>
+
+      <div class="project-body">
+        <div class="project-desc">
+          <p><strong>Objective:</strong> Drive high-intent website traffic and LinkedIn profile visits from startup founders and executives actively searching for fractional CMO services. Campaign type: Google Search with Maximize Clicks bidding.</p>
+          <p>Worked on keyword strategy, ad copy development, negative keyword filtering, and campaign structuring. Targeted professionals searching for terms like "startup marketing consultant", "marketing officer", and "fractional CMO" — segmenting high-intent role-based queries from general informational searches.</p>
+          <p><strong>Outcome:</strong> Campaign generated measurable LinkedIn profile discovery — 104 profile viewers, +20% vs previous week. Top industries engaging: Marketing Services. Key companies viewing: ITC Limited, Fiverr, The Crypto Times. Foundation established for conversion phase.</p>
+        </div>
+        <div>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-val orange">14.32%</div><div class="kpi-lbl">CTR</div></div>
+            <div class="kpi"><div class="kpi-val blue">799</div><div class="kpi-lbl">Clicks</div></div>
+            <div class="kpi"><div class="kpi-val green">5,578</div><div class="kpi-lbl">Impressions</div></div>
+            <div class="kpi"><div class="kpi-val purple">₹3.19</div><div class="kpi-lbl">Avg CPC</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kw-section">
+        <h3>Top Keywords by Performance</h3>
+        <table class="kw-table" aria-label="Keyword performance data">
+          <thead>
+            <tr>
+              <th>Keyword</th>
+              <th>Impressions</th>
+              <th>Clicks</th>
+              <th>CTR</th>
+              <th>Avg CPC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>marketing officer</td>
+              <td>819</td>
+              <td>167</td>
+              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,20.39%,80px)"></div><span class="ctr-num">20.39%</span></div></td>
+              <td>₹1.99</td>
+            </tr>
+            <tr>
+              <td>startup growth strategy</td>
+              <td>1,916</td>
+              <td>223</td>
+              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,11.64%,80px)"></div><span class="ctr-num">11.64%</span></div></td>
+              <td>₹2.90</td>
+            </tr>
+            <tr>
+              <td>startup marketing consultant</td>
+              <td>756</td>
+              <td>85</td>
+              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,11.24%,80px)"></div><span class="ctr-num">11.24%</span></div></td>
+              <td>₹2.34</td>
+            </tr>
+            <tr>
+              <td>chief marketing officer roles</td>
+              <td>832</td>
+              <td>32</td>
+              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,7.71%,80px)"></div><span class="ctr-num">7.71%</span></div></td>
+              <td>₹1.41</td>
+            </tr>
+            <tr>
+              <td>"grow SaaS startup"</td>
+              <td>12</td>
+              <td>2</td>
+              <td><div class="ctr-bar"><div class="ctr-fill" style="width:clamp(8px,16.67%,80px)"></div><span class="ctr-num">16.67%</span></div></td>
+              <td>₹2.20</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="strategy-strip">
+        <div class="strategy-item">
+          <h4>Ad Copy Strategy</h4>
+          <p>Top headlines: "Fractional CMO for Startups", "Hire a Fractional CMO" (pinned P1), "Founder-Friendly CMO Support". Best description: "Get senior marketing leadership without hiring full-time. No agency layers. No long-term contracts."</p>
+        </div>
+        <div class="strategy-item">
+          <h4>Negative Keyword Filtering</h4>
+          <p>Proactively excluded irrelevant queries to prevent wasteful spend. Focused budget on decision-stage searchers actively evaluating fractional leadership options — not informational or career-seeking queries.</p>
+        </div>
+        <div class="strategy-item">
+          <h4>LinkedIn Impact Proof</h4>
+          <p>104 profile viewers post-campaign, +20% vs prior week. Top location: Mumbai Metro. Top industry: Marketing Services. Companies viewing included ITC Limited and Fiverr — validating message-market fit with senior professionals.</p>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <span class="insight-icon">💡</span>
+        <p><strong>Business-level read:</strong> At ₹3.19 CPC with 14.32% CTR (vs 3–5% industry avg), this campaign achieved <strong>3× the click efficiency</strong> of a typical search campaign. The next phase requires conversion tracking setup via GTM to measure consultation bookings and calculate true ROAS. This is a campaign built for scale — the foundation and quality signals are in place.</p>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: META ADS -->
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <div class="project-meta">
+            <span class="badge badge-orange">Meta Ads</span>
+            <span class="badge badge-purple">D2C Fashion</span>
+            <span class="badge badge-green">E-Commerce</span>
+          </div>
+          <h3 class="project-title">D2C Fashion Brand Launch — Full-Funnel Meta Ads Campaign</h3>
+          <p class="project-client">Client: Picks For Youu (PFY) — Indian Fusion Wear &amp; Western fashion startup · 2-month-old brand</p>
+        </div>
+        <div class="project-number">02</div>
+      </div>
+
+      <div class="project-body">
+        <div class="project-desc">
+          <p><strong>Objective:</strong> Build brand awareness, drive Instagram profile visits, and generate DM-based sales enquiries for a newly launched D2C fashion brand blending Indian Fusion Wear and Western styles.</p>
+          <p>Designed and managed a full-funnel, 3-campaign Meta Ads architecture across 4 days: <strong>Traffic Campaign</strong> (Instagram page visits, ABO with 2 ad sets), <strong>Sales Campaign</strong> (UGC + testimonial creatives), and <strong>Leads Campaign</strong> (product video for DM intent). Used Ad Set Budget Optimisation (ABO) to control spend at the creative level and test performance independently.</p>
+          <p><strong>Outcome:</strong> Best creative achieved ₹17.38 CPL with 24 messaging conversions. Campaign generated a <strong>confirmed sale</strong> — real revenue from paid spend. Total campaign reach: 2,06,618 users on ₹2,400 budget.</p>
+        </div>
+        <div>
+          <div class="kpi-grid">
+            <div class="kpi"><div class="kpi-val orange">2,06,618</div><div class="kpi-lbl">Total Reach</div></div>
+            <div class="kpi"><div class="kpi-val blue">₹17.38</div><div class="kpi-lbl">Best CPL</div></div>
+            <div class="kpi"><div class="kpi-val green">50+</div><div class="kpi-lbl">Total Leads</div></div>
+            <div class="kpi"><div class="kpi-val purple">₹48</div><div class="kpi-lbl">Avg CPL</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="creative-table-wrap">
+        <h3 style="font-size:var(--text-base);font-weight:600;margin-bottom:var(--space-4);">Traffic Campaign — Creative Comparison</h3>
+        <table class="creative-table" aria-label="Meta Ads creative performance comparison">
+          <thead>
+            <tr>
+              <th>Creative</th>
+              <th>Audience</th>
+              <th>Budget</th>
+              <th>Reach</th>
+              <th>Impressions</th>
+              <th>Msg. Convs.</th>
+              <th>CPL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td>Creative 1 — Fusion Outfit USP <span class="winner-tag">BEST</span></td>
+              <td>Shoppers (All, 170M–200M)</td>
+              <td>₹417</td>
+              <td>2,06,618</td>
+              <td>2,19,842</td>
+              <td>24</td>
+              <td>₹17.38</td>
+            </tr>
+            <tr>
+              <td>Creative 2 — Western Looks Reel</td>
+              <td>Women (18–55, 59M–69M)</td>
+              <td>₹437</td>
+              <td>5,885</td>
+              <td>6,618</td>
+              <td>26</td>
+              <td>₹16.84</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="strategy-strip">
+        <div class="strategy-item">
+          <h4>Campaign Architecture</h4>
+          <p>3 campaigns, 4 days, ₹2,500 total: Traffic (ABO, 2 ad sets, ₹150/day × 3 days), Sales (UGC + testimonials, ₹500 lifetime), Leads (product video, ₹500/day × 2 days). Each campaign tested a different funnel objective.</p>
+        </div>
+        <div class="strategy-item">
+          <h4>Audience Strategy</h4>
+          <p>Creative 1 targeted broad engaged shoppers (170M–200M, all genders, India) — maximising reach for brand awareness. Creative 2 narrowed to fashion-forward women (18–55) with trendsetters and wedding interests for higher purchase intent.</p>
+        </div>
+        <div class="strategy-item">
+          <h4>Creative Approach</h4>
+          <p>Sales campaign used UGC + customer testimonials to build social proof and trust for a 2-month-old brand. Leads campaign used an informational product video to introduce the range and motivate DM enquiries — message-optimised placements.</p>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <span class="insight-icon">💡</span>
+        <p><strong>Business-level read:</strong> ₹2,500 spend → 2,06,618 reach → 50+ leads → <strong>1 confirmed sale</strong>. At an average fashion AOV of ₹600–₹1,200, even a 10% lead-to-sale conversion rate (5 sales × ₹800 avg) = ₹4,000 revenue on ₹2,500 spend — a <strong>1.6× ROAS on a cold-traffic brand launch</strong> with zero prior audience. The next step is Meta Pixel setup + retargeting audiences for 3–5× ROAS in phase 2.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="certs-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Credentials</p>
+    <h2 class="section-title">Certifications</h2>
+    <p class="section-sub">Formal training backed by industry-recognised certifications.</p>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon google">🎯</div>
+        <div class="cert-name">Google Ads Search Certification</div>
+        <div class="cert-issuer">Google Skillshop · 2026</div>
+        <div class="cert-score">⭐ 93% Score</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon meta">📘</div>
+        <div class="cert-name">Digital Marketing & Generative AI Program</div>
+        <div class="cert-issuer">Digital Scholar · 2025</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon ds">📈</div>
+        <div class="cert-name">Performance Marketing Practitioner</div>
+        <div class="cert-issuer">Digital Scholar · Meta Ads + Google Ads Track</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-cta">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h2>Let's build something<br><em>that performs.</em></h2>
+        <p>I'm actively looking for a Performance Marketing Executive role in Mumbai. If you're a brand or agency looking for someone who can hit the ground running with real campaign experience, let's talk.</p>
+        <a href="mailto:nisargshetty7@gmail.com" class="btn-primary" style="display:inline-flex;">Send Me an Email →</a>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:nisargshetty7@gmail.com" class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <div class="label">Email</div>
+            <div class="val">nisargshetty7@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+919004455377" class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div class="contact-item-text">
+            <div class="label">Phone</div>
+            <div class="val">+91 9004455377</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/nisarg-shetty" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <div class="contact-item-icon">💼</div>
+          <div class="contact-item-text">
+            <div class="label">LinkedIn</div>
+            <div class="val">linkedin.com/in/nisarg-shetty</div>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <div class="label">Location</div>
+            <div class="val">Dadar, Mumbai · Open to on-site & hybrid</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Nisarg Shetty — Performance Marketing Portfolio</p>
+    <p>Mumbai, Maharashtra · Available for work</p>
+  </div>
+</footer>
+
+<script>
+// Theme toggle
+(function(){
+  const t=document.querySelector('[data-theme-toggle]');
+  const r=document.documentElement;
+  let d=r.getAttribute('data-theme')||'dark';
+  function setTheme(theme){
+    d=theme; r.setAttribute('data-theme',d);
+    if(t) t.innerHTML=d==='dark'
+      ?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+      :'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  }
+  setTheme(d);
+  if(t) t.addEventListener('click',()=>setTheme(d==='dark'?'light':'dark'));
+})();
+
+// Number counter animation
+function animateCount(el){
+  const text=el.textContent;
+  const numMatch=text.match(/[\d,.]+/);
+  if(!numMatch) return;
+  const target=parseFloat(numMatch[0].replace(/,/g,''));
+  if(isNaN(target)) return;
+  const isPercent=text.includes('%');
+  const hasComma=numMatch[0].includes(',');
+  const prefix=text.startsWith('₹')?'₹':'';
+  const suffix=isPercent?'%':'';
+  let start=0; const duration=1200; const startTime=performance.now();
+  function step(now){
+    const p=Math.min((now-startTime)/duration,1);
+    const ease=1-Math.pow(1-p,3);
+    const cur=start+(target-start)*ease;
+    let display;
+    if(hasComma) display=Math.round(cur).toLocaleString('en-IN');
+    else display=isPercent?cur.toFixed(2):cur.toFixed(cur<100?2:0);
+    el.textContent=prefix+display+suffix;
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// Intersection Observer for animations
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      // animate stat numbers
+      const num=e.target.querySelector('.stat-number');
+      if(num) animateCount(num);
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:0.15});
+
+document.querySelectorAll('.fade-up,.stat-card,.kpi,.cert-card,.project-card').forEach(el=>{
+  el.classList.add('fade-up');
+  observer.observe(el);
+});
+
+// Animate KPI values on scroll
+const kpiObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const val=e.target.querySelector('.kpi-val');
+      if(val) animateCount(val);
+      kpiObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.3});
+document.querySelectorAll('.kpi').forEach(el=>kpiObs.observe(el));
+
+// Smooth bar animation for CTR bars
+const barObs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.ctr-fill').forEach(bar=>{
+        const w=bar.style.width;bar.style.width='0';
+        setTimeout(()=>bar.style.width=w,100);
+      });
+      barObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.2});
+document.querySelectorAll('.kw-table').forEach(el=>barObs.observe(el));
+</script>
+</body>
+</html>
